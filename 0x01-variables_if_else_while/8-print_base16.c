@@ -1,53 +1,21 @@
 #include <stdio.h>
 
-#include <ctype.h>
-
 /**
-
- * main - Print all single digits of base 16 followed by new line
-
+ * main - entry point
  *
-
- * Return: returns 0
-
+ * Description: Print all the digits of base 16 in lowercase
+ * Return: 0
  */
-
 int main(void)
-
 {
+char x;
 
-	int digit;
+for (x = '0'; x <= '9'; ++x)
+putchar(x);
+for (x = 'a'; x <= 'f'; ++x)
+putchar(x);
 
+putchar('\n');
 
-
-	for (digit = '0'; digit <= '9'; digit++)
-
-	{
-
-		putchar(digit);
-
-		if (digit == '9')
-
-		{
-
-			digit = 'a';
-
-			for (; digit <= 'f'; digit++)
-
-			{
-
-				putchar(digit);
-
-			}
-
-			break;
-
-		}
-
-	}
-
-	putchar('\n');
-
-	return (0);
-
+return (0);
 }

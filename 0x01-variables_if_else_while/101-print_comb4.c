@@ -1,67 +1,35 @@
 #include <stdio.h>
 
 /**
-
- * main - prints all combinations of three digits with,
-
- * and space followed by new line
-
+ * main - Prints all possible combinations of three different digits,
+ *        in ascending order, separated by a comma followed by a space.
  *
-
- * Return: returns 0
-
+ * Return: Always 0.
  */
-
 int main(void)
-
 {
+int digit1, digit2, digit3;
 
-	int hund;
+for (digit1 = 0; digit1 < 8; digit1++)
+{
+for (digit2 = digit1 + 1; digit2 < 9; digit2++)
+{
+for (digit3 = digit2 + 1; digit3 < 10; digit3++)
+{
+putchar((digit1 % 10) + '0');
+putchar((digit2 % 10) + '0');
+putchar((digit3 % 10) + '0');
 
-	int tens;
+if (digit1 == 7 && digit2 == 8 && digit3 == 9)
+continue;
 
-	int ones;
+putchar(',');
+putchar(' ');
+}
+}
+}
 
+putchar('\n');
 
-
-	for (hund = 0; hund <= 9; hund++)
-
-	{
-
-		for (tens = hund + 1; tens <= 9; tens++)
-
-		{
-
-			for (ones = tens + 1; ones <= 9; ones++)
-
-			{
-
-				putchar(hund + '0');
-
-				putchar(tens + '0');
-
-				putchar(ones + '0');
-
-
-
-				if (hund < 7)
-
-				{
-
-					putchar(',');
-
-					putchar(' ');
-
-				}
-
-			}
-
-		}
-
-	}
-
-	putchar('\n');
-
-	return (0);
-
+return (0);
 }

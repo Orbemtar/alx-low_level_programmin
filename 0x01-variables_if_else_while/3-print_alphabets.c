@@ -1,55 +1,20 @@
 #include <stdio.h>
-
-#include <ctype.h>
-
 /**
-
- * main - Program to print alphabet letter in all cases followed by new line
-
+ * main - entry point
  *
-
- * Return: return 0
-
+ * Description: Print lower and upper alphabet on the same line
+ * Return: 0
  */
-
 int main(void)
-
 {
+int c;
 
-	int letter;
+for (c = 0; c < 26; ++c)
+putchar('a' + c);
+for (c = 0; c < 26; ++c)
+putchar('A' + c);
 
+putchar('\n');
 
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-
-	{
-
-		letter = tolower(letter);
-
-		putchar(letter);
-
-		if (letter == 'z')
-
-		{
-
-			letter = 'A';
-
-			for (; letter <= 'Z'; letter++)
-
-			{
-
-				putchar(letter);
-
-			}
-
-			break;
-
-		}
-
-	}
-
-	putchar('\n');
-
-	return (0);
-
+return (0);
 }

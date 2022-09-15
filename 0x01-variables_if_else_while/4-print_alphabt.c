@@ -1,43 +1,21 @@
 #include <stdio.h>
-
-#include <stdio.h>
-
 /**
-
- * main - Program to alphabet letters ecxept q and e followed by new line
-
+ * main - entry point
  *
-
- * Return: return 0
-
+ * Description: Print lowercase alphabet excluding e and q
+ * Return: 0
  */
-
 int main(void)
-
 {
+char c;
 
-	int letter;
+for (c = 'a'; c <= 'z'; ++c)
+{
+if (c != 'e' && c != 'q')
+putchar(c);
+}
 
+putchar('\n');
 
-
-	for (letter = 'a'; letter <= 'z'; letter++) 
-
-	{
-
-		if (letter == 'q' || letter == 'e') 
-
-		{
-
-			continue;
-
-		}
-
-		putchar(letter);
-
-	}
-
-	putchar ('\n');  
-
-	return (0);  
-
+return (0);
 }

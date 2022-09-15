@@ -1,39 +1,18 @@
 #include <stdio.h>
-
-#include <ctype.h>
-
 /**
-
- * main - Entrypoint
-
+ * main - entry point
  *
-
- * Return: Always 0 (success)
-
- *
-
+ * Description: Print the lowercase alphabet
+ * Return: 0
  */
-
 int main(void)
-
 {
+int c;
 
-	int letter;
+for (c = 0; c < 26; ++c)
+putchar('a' + c);
 
+putchar('\n');
 
-
-	for (letter = 'a'; letter <= 'z'; letter++)
-
-	{
-
-		letter = tolower(letter);
-
-		putchar(letter);
-
-	}
-
-	putchar('\n');
-
-	return (0);
-
+return (0);
 }
